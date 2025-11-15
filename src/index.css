@@ -1,0 +1,13 @@
+body {
+font-family: sans-serif;
+}
+
+
+img {
+user-select: none;
+}
+
+
+button {
+cursor: pointer;
+}
