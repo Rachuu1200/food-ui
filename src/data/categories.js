@@ -1,13 +1,11 @@
 export const categories = [
-{ key: "desserts", label: "Desserts", icon: "Desserts.png" },
-{ key: "rice", label: "Rice", icon: "rice.jfif" },
-{ key: "pizzas", label: "Pizzas", icon: "pizza.png" },
-{ key: "momos", label: "Momos", icon: "momo.png" },
-{ key: "burgers", label: "Burgers", icon: "burger.jfif" },
-{ key: "noodles", label: "Noodles", icon: "noodle.png" },
-{ key: "spicy", label: "Spicy", icon: "Spicy.jfif" },
-{ key: "tandoor", label: "Tandoor", icon: "tandoor.avif" },
-{ key: "naan", label: "Naan & Curries", icon: "naan.jfif" },
-{ key: "Salad", label: "Combos", icon: "salad.jfif" },
-{ key: "exclusive", label: "Exclusives", icon: "/icons/exclusive.png" }
+  { key: "Rice", label: "Rice", icon: "rice2.jfif" },
+  { key: "Noodle", label: "Noodle", icon: "noodle.png" },
+  { key: "Mittho", label: "Momo", icon: "momo.png" },
+  { key: "Cheesy", label: "Pizza", icon: "pizza.png" },
+  { key: "Party", label: "Snacks", icon: "burger.jfif" },
+  { key: "Spicy", label: "Spicy", icon: "Spicy.jfif" },
+  { key: "Babbaal", label: "Khaja Set", icon: "tandoor.avif" },
+  { key: "Grilled", label: "Grilled", icon: "grill.webp" },
+  { key: "Healthy", label: "Healthy", icon: "salad2.jfif" }
 ];

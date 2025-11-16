@@ -1,19 +1,20 @@
 export default function CategoryIcons({ categories, onSelect }) {
   return (
-    <div className="grid grid-cols-4 gap-4 sm:grid-cols-6 lg:grid-cols-8">
+    <div className="grid grid-cols-4 sm:grid-cols-5 gap-4">
       {categories.map((c) => (
-        <button
+        <div
           key={c.key}
+          className="text-center cursor-pointer"
           onClick={() => onSelect(c.key)}
-          className="flex flex-col items-center text-center text-xs sm:text-sm p-1 rounded hover:bg-gray-200"
         >
           <img
             src={c.icon}
             alt={c.label}
-            className="w-10 h-10 mx-auto object-contain"
+            className="w-12 h-12 mx-auto rounded-full object-cover"
+            onError={(e) => (e.target.src = "/placeholder.png")} // fallback
           />
-          <p>{c.label}</p>
-        </button>
+          <p className="text-sm">{c.label}</p>
+        </div>
       ))}
     </div>
   );

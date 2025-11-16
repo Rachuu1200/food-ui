@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { foods } from "../data/foods";
 import { categories } from "../data/categories";
-import { filters } from "../components/Filters";
+import { filters } from "../components/FilterChips";
 import CategoryIcons from "../components/CategoryIcons";
 import FilterChips from "../components/FilterChips";
 import FoodCard from "../components/FoodCard";
@@ -11,50 +11,39 @@ export default function Home() {
   const [selectedFilter, setSelectedFilter] = useState("All");
   const [selectedCategory, setSelectedCategory] = useState(null);
 
-  // If a category is selected, show Item component
   if (selectedCategory) {
-    return (
-      <div className="p-4">
-        <button
-          onClick={() => setSelectedCategory(null)}
-          className="mb-4 text-blue-500"
-        >
-          ← Back
-        </button>
-        <Item category={selectedCategory} />
-      </div>
-    );
+    return <Item category={selectedCategory} onBack={() => setSelectedCategory(null)} />;
   }
 
-  // Filter foods based on selectedFilter
   const filteredFoods =
     selectedFilter === "All"
       ? foods
-      : foods.filter((f) => f.tags.includes(selectedFilter));
+      : foods.filter((f) => f.category === selectedFilter);
 
   return (
     <div className="p-4 space-y-6 max-w-5xl mx-auto">
-      {/* Category icons */}
-      <CategoryIcons
-        categories={categories}
-        onSelect={(key) => setSelectedCategory(key)}
-      />
+      <CategoryIcons categories={categories} onSelect={(key) => setSelectedCategory(key)} />
+      <FilterChips filters={filters} selected={selectedFilter} setSelected={setSelectedFilter} />
 
-      {/* Filter chips */}
-      <FilterChips
-        filters={filters}
-        selected={selectedFilter}
-        setSelected={setSelectedFilter}
-      />
-
-      {/* Section title */}
       <h2 className="text-xl font-bold">{selectedFilter}</h2>
 
-      {/* Food grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-        {filteredFoods.map((food) => (
-          <FoodCard key={food.id} food={food} />
-        ))}
+      <div className="relative">
+        <div id="foodScroll" className="flex gap-4 overflow-x-auto scroll-smooth pb-4">
+          {filteredFoods.map((food) => (
+            <div className="min-w-[150px] sm:min-w-[180px]" key={food.id}>
+              <FoodCard food={food} />
+            </div>
+          ))}
+        </div>
+
+        <button
+          onClick={() =>
+            document.getElementById("foodScroll").scrollBy({ left: 200, behavior: "smooth" })
+          }
+          className="absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow p-2 rounded-full"
+        >
+          ➜
+        </button>
       </div>
     </div>
   );
