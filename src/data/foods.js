@@ -89,5 +89,21 @@ export const foods = [
 
   // ---------------------- HEALTHY ----------------------
   { id: 69, name: "Fruit Salad", price: 350, image: "https://i.imgur.com/NZaxNF1.jpeg", category: "Healthy" },
-  { id: 88, name: "Nepali Salad", price: 160, image: "https://i.imgur.com/nhvZWjK.jpeg", category: "Healthy" }
+  { id: 88, name: "Nepali Salad", price: 160, image: "https://i.imgur.com/nhvZWjK.jpeg", category: "Healthy" },
+
+  // ---------------------- DRINKS (multi-category) ----------------------
+  { id: 200, name: "Coke small", price: 60, image: " https://i.imgur.com/SoyGt4M.jpg", category: "Drink"},
+  { id: 201, name: "Red Bull- blue 250ml", price: 280, image: "https://i.imgur.com/m2rxXNF.jpg", category: "Drink" }, 
+  { id: 202, name: "Red Bull- Red 250ml", price: 90, image: " https://i.imgur.com/E8eRYC9.png", category: "Drink" },
+  { id: 203, name: "Old durbar red", price: 3250, image: "https://i.imgur.com/EcXf300.jpg", category: "Drink" }, 
+  { id: 204, name: "Gorkha Beer SMall", price: 195, image: "https://i.imgur.com/PZjJpcM.jpg", category: "Drink" },
+  { id: 205, name: "Tuborg", price: 475, image: "https://i.imgur.com/8C1zqv7.jpg", category: "Drink" },
+  { id: 206, name: "Golden oak", price: 1350, image: "https://i.imgur.com/Td0ZYPr.jpg", category: "Drink" }, 
+  { id: 207, name: "Highlander vodka", price: 1285, image: "https://i.imgur.com/UoWCVqI.jpg", category: "Drink" }, 
+  { id: 208, name: "8848 Vodka", price: 2600, image: "https://i.imgur.com/8UxIysS.jpg", category: "Drink",  },
+  { id: 209, name: "Arna Beer Small", price: 190, image: "https://i.imgur.com/PBRCxRf.png", category: "Drink" },
+ { id: 210, name: "Khukuri Rum", price: 2600, image: "https://i.imgur.com/n4WQZ7v.jpg", category: "Drink" },
+ { id: 211, name: "Coke 2.25L", price: 280, image: "https://i.imgur.com/kXSAaNQ.jpg", category: "Drink" }, 
+ { id: 210, name: "Mountain Dew 2.25L", price: 265, image: "https://i.imgur.com/xRvwzqh.jpg", category: "Drink" }, 
+ { id: 210, name: "Mountain Dew 500ML", price: 120, image: "https://i.imgur.com/LCaRu87.jpg", category: "Drink" }
 ];

@@ -8,7 +8,8 @@ export const filters = [
   "Party",
   "Cheesy",
   "Spicy",
-  "Healthy"
+  "Healthy",
+  "Drink"
 ];
 
 export default function FilterChips({ filters, selected, setSelected }) {

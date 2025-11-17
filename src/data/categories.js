@@ -7,5 +7,6 @@ export const categories = [
   { key: "Spicy", label: "Spicy", icon: "Spicy.jfif" },
   { key: "Babbaal", label: "Khaja Set", icon: "tandoor.avif" },
   { key: "Grilled", label: "Grilled", icon: "grill.webp" },
-  { key: "Healthy", label: "Healthy", icon: "salad2.jfif" }
+  { key: "Healthy", label: "Healthy", icon: "salad2.jfif" },
+  { key: "Drink", label: "Drink", icon: "drink.jfif" }
 ];
